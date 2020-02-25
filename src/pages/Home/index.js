@@ -1,12 +1,12 @@
 import React from 'react';
-import { Avatar } from 'react-native-paper';
 
-import { Container, Text } from './styles';
+import { Container } from './styles';
+import GridList from '~/components/GridList';
 
 export default function Home() {
   return (
     <Container>
-      <Text>Home!</Text>
+      <GridList />
     </Container>
   );
 }
