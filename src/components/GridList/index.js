@@ -10,7 +10,7 @@ import {
   Image,
 } from './styles';
 
-import { Chip } from 'react-native-paper';
+import { darken } from 'polished';
 import Label from '~/components/Label';
 
 export default function GridList({ data }) {
@@ -20,15 +20,21 @@ export default function GridList({ data }) {
       items={data}
       spacing={5}
       renderItem={({ item, index }) => (
-        <ItemContainer backgroundColor={item.color_custom}>
-          <InfoContainer>
-            <TextsContainer>
-              <ItemCode>{item.number}</ItemCode>
-              <ItemName>{item.name}</ItemName>
-            </TextsContainer>
-            <Label types={item.types} />
-          </InfoContainer>
-          <Image source={{ uri: item.img }} />
+        <ItemContainer
+          backgroundColor={item.color_custom}
+          rippleColor={darken(0.1, item.color_custom)}
+          onPress={() => console.log('Pressed')}
+        >
+          <>
+            <InfoContainer>
+              <TextsContainer>
+                <ItemCode>{item.number}</ItemCode>
+                <ItemName>{item.name}</ItemName>
+              </TextsContainer>
+              <Label types={item.types} />
+            </InfoContainer>
+            <Image source={{ uri: item.img }} />
+          </>
         </ItemContainer>
       )}
     />

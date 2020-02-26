@@ -1,11 +1,12 @@
 import styled from 'styled-components/native';
 import { FlatGrid } from 'react-native-super-grid';
+import { TouchableRipple } from 'react-native-paper';
 
 export const Grid = styled(FlatGrid)`
   flex: 1;
 `;
 
-export const ItemContainer = styled.View`
+export const ItemContainer = styled(TouchableRipple)`
   justify-content: space-between;
   flex-direction: row;
   height: 120px;
