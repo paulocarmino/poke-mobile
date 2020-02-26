@@ -9,6 +9,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 
 import Routes from './routes';
 import apolloClient from '~/graphql/apolloClient';
+import SearchbarProvider from '~/contexts/Searchbar';
 
 const DefaultTheme = {
   ...PaperDefaultTheme,
@@ -25,7 +26,9 @@ export default function MainApp() {
     <ApolloProvider client={apolloClient}>
       <PaperProvider theme={DefaultTheme}>
         <NavigationContainer theme={DefaultTheme}>
-          <Routes />
+          <SearchbarProvider>
+            <Routes />
+          </SearchbarProvider>
         </NavigationContainer>
       </PaperProvider>
     </ApolloProvider>

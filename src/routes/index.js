@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { useTheme } from '@react-navigation/native';
 
 import { IconButton } from 'react-native-paper';
+import SearchIcon from '~/components/SearchIcon';
 
 import Home from '~/pages/Home';
 import Details from '~/pages/Details';
@@ -27,7 +28,7 @@ const HomeHeaderOptions = () => {
   return {
     title: 'PokeApp',
     headerLeft: () => <IconButton icon="menu" color={colors.accent} />,
-    headerRight: () => <IconButton icon="magnify" color={colors.accent} />,
+    headerRight: () => <SearchIcon />,
   };
 };
 

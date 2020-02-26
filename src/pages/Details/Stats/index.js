@@ -13,7 +13,6 @@ import Label from '~/components/Label';
 export default function About({ route }) {
   const { pokemon } = route.params;
 
-  console.tron.log(pokemon);
   return (
     <Container>
       <Title>Basic Stats</Title>

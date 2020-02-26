@@ -10,7 +10,6 @@ import {
 
 export default function About({ route }) {
   const { pokemon } = route.params;
-  console.tron.log(pokemon);
   return (
     <Container>
       <Title>Description</Title>
