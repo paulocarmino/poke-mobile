@@ -13,7 +13,7 @@ import {
 import { darken } from 'polished';
 import Label from '~/components/Label';
 
-export default function GridList({ data }) {
+export default function GridList({ data, navigation }) {
   return (
     <Grid
       itemDimension={150}
@@ -23,7 +23,7 @@ export default function GridList({ data }) {
         <ItemContainer
           backgroundColor={item.color_custom}
           rippleColor={darken(0.1, item.color_custom)}
-          onPress={() => console.log('Pressed')}
+          onPress={() => navigation.navigate('Details', item)}
         >
           <>
             <InfoContainer>

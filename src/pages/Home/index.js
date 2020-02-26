@@ -5,7 +5,7 @@ import { Container, Text } from './styles';
 import GridList from '~/components/GridList';
 import { GET_ALL_POKEMONS } from '~/graphql/query';
 
-export default function Home() {
+export default function Home({ navigation }) {
   const { loading, error, data } = useQuery(GET_ALL_POKEMONS);
 
   if (loading) return <Text>Loading...</Text>;
@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <Container>
-      <GridList data={data.pokemons} />
+      <GridList data={data.pokemons} navigation={navigation} />
     </Container>
   );
 }
