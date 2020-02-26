@@ -3,15 +3,13 @@ import styled from 'styled-components/native';
 export const Container = styled.SafeAreaView`
   flex: 1;
 
-  background-color: #fff;
+  background-color: ${({ background }) => (background ? background : '#FFF')};
 `;
 
 export const Header = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  height: 210px;
-
-  background-color: ${({ background }) => (background ? background : '#FFF')};
+  height: 170px;
 `;
 
 export const TextContainer = styled.View`
@@ -43,6 +41,20 @@ export const Image = styled.Image.attrs({
 })`
   margin-right: 20px;
 
-  width: 170px;
-  height: 170px;
+  width: 160px;
+  height: 160px;
+`;
+
+export const DetailsContainer = styled.View`
+  flex: 1;
+  background-color: #fff;
+  border-radius: 30px;
+
+  margin-top: -30px;
+  padding-top: 20px;
+`;
+
+export const FixBottomColor = styled.View`
+  height: 35px;
+  background-color: #fff;
 `;

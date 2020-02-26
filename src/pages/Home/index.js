@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 import { useQuery } from '@apollo/react-hooks';
 
 import { Container, Text } from './styles';
@@ -13,6 +14,7 @@ export default function Home({ navigation }) {
 
   return (
     <Container>
+      <StatusBar barStyle="light-content" />
       <GridList data={data.pokemons} navigation={navigation} />
     </Container>
   );

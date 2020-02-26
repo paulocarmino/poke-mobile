@@ -1154,6 +1154,13 @@
     shortid "^2.2.15"
     use-subscription "^1.3.0"
 
+"@react-navigation/material-top-tabs@^5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@react-navigation/material-top-tabs/-/material-top-tabs-5.0.7.tgz#5f82c7b28f96d6206d7d13b158a98cf08abcc631"
+  integrity sha512-JRUUH6QCeEsSA+6hQhZ+0eKcCuN6GAHUTuV3kRz0XGalmwXoK7cJ858N7cdTc8iDv6+4wpetLT0IfEUwIFDa0g==
+  dependencies:
+    color "^3.1.2"
+
 "@react-navigation/native@^5.0.7":
   version "5.0.7"
   resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.0.7.tgz#621c4820ab751d09b13e39619439bd775a26f606"
@@ -4600,6 +4607,11 @@ react-native-super-grid@^3.1.2:
   integrity sha512-H7dB2j0ZGH6i//2oOy1xtdLam1k3Y41jIdLwv1ukSTuSe9j/de++GrrCLqZvjAaHx2JNHgrqQRQy3kqzKos3DQ==
   dependencies:
     prop-types "^15.6.0"
+
+react-native-tab-view@^2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-2.13.0.tgz#23037aa43b0f8f682ddc20415a4baaaf6f82ae8f"
+  integrity sha512-AeYbp/u91+D/C9+PmVEPBmFb3ixv8IkLMC3Sc5MajJ/fg0Zl3Of+BcEknBvTnKoe7Fj2y8+Qf9zorBbh5xzh4A==
 
 react-native-view-shot@3.0.2:
   version "3.0.2"
