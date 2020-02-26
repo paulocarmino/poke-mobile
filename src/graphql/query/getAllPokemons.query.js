@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export default gql`
-  query getAllPokemons {
-    pokemons(sort: "number") {
+  query getAllPokemons($where: JSON) {
+    pokemons(where: $where, sort: "number") {
       number
       name
       specie
