@@ -19,7 +19,6 @@ export const Title = styled.Text`
 export const ItemContainer = styled.View`
   flex-direction: row;
   padding: 3px 0px;
-  /* justify-content: space-between; */
 `;
 
 export const ItemTitle = styled.Text`

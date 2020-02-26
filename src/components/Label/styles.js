@@ -1,4 +1,7 @@
 import styled from 'styled-components/native';
+import { Dimensions } from 'react-native';
+
+const barWidth = Dimensions.get('screen').width - 50;
 
 export const TypesContainer = styled.View`
   flex-direction: column;
@@ -9,7 +12,7 @@ export const TypesContainer = styled.View`
     `
     flex-direction: row;
     margin-top: 5px;
-  `}
+  `};
 `;
 
 export const Label = styled.View`
