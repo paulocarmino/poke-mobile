@@ -3,6 +3,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 import About from '~/pages/Details/About';
 import Stats from '~/pages/Details/Stats';
+import Evolution from '~/pages/Details/Evolution';
 
 const Tab = createMaterialTopTabNavigator();
 export default DetailsTabs = ({ color, pokemon }) => {
@@ -15,7 +16,7 @@ export default DetailsTabs = ({ color, pokemon }) => {
       <Tab.Screen name="Stats" component={Stats} initialParams={{ pokemon }} />
       <Tab.Screen
         name="Evolution"
-        component={About}
+        component={Evolution}
         initialParams={{ pokemon }}
       />
     </Tab.Navigator>

@@ -29,7 +29,7 @@ export default function About({ route }) {
         <ItemContent>{pokemon.weight}</ItemContent>
       </ItemContainer>
       <Title>Breeding</Title>
-      <ItemContent>Soon!</ItemContent>
+      <ItemContent>Coming Soon!</ItemContent>
     </Container>
   );
 }
