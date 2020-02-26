@@ -6,13 +6,20 @@ export const Grid = styled(FlatGrid)`
 `;
 
 export const ItemContainer = styled.View`
-  justify-content: flex-end;
-  height: 140px;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 120px;
 
   border-radius: 5px;
   padding: 10px;
 
   background-color: ${props => props.backgroundColor};
+`;
+
+export const TextsContainer = styled.View``;
+
+export const InfoContainer = styled.View`
+  justify-content: space-between;
 `;
 
 export const ItemName = styled.Text`
@@ -24,4 +31,10 @@ export const ItemName = styled.Text`
 export const ItemCode = styled.Text`
   font-size: 12px;
   color: #fff;
+`;
+
+export const Image = styled.Image.attrs({
+  resizeMode: 'stretch',
+})`
+  width: 90px;
 `;

@@ -11,11 +11,9 @@ export default function Home() {
   if (loading) return <Text>Loading...</Text>;
   if (error) return <Text>Error :(</Text>;
 
-  console.tron.log(data);
-
   return (
     <Container>
-      <GridList />
+      <GridList data={data.pokemons} />
     </Container>
   );
 }
