@@ -1,11 +1,35 @@
 import React from 'react';
 
-import { Container, Text } from './styles';
+import {
+  Container,
+  Title,
+  ItemContainer,
+  ItemTitle,
+  ItemContent,
+} from './styles';
 
-export default function About() {
+export default function About({ route }) {
+  const { pokemon } = route.params;
+  console.tron.log(pokemon);
   return (
     <Container>
-      <Text>About</Text>
+      <Title>Description</Title>
+      <ItemContent>{pokemon.description}</ItemContent>
+      <Title>Details</Title>
+      <ItemContainer>
+        <ItemTitle>Specie</ItemTitle>
+        <ItemContent>{pokemon.specie}</ItemContent>
+      </ItemContainer>
+      <ItemContainer>
+        <ItemTitle>Height</ItemTitle>
+        <ItemContent>{pokemon.height}</ItemContent>
+      </ItemContainer>
+      <ItemContainer>
+        <ItemTitle>Weight</ItemTitle>
+        <ItemContent>{pokemon.weight}</ItemContent>
+      </ItemContainer>
+      <Title>Breeding</Title>
+      <ItemContent>Soon!</ItemContent>
     </Container>
   );
 }

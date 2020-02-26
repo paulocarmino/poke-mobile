@@ -42,7 +42,7 @@ export default function Details({ navigation, route }) {
           <Image source={{ uri: pokemon.img }} style={{ zIndex: 10 }} />
         </Header>
         <DetailsContainer style={{ zIndex: -1 }}>
-          <DetailsTabs color={colorSatured} />
+          <DetailsTabs color={colorSatured} pokemon={pokemon} />
         </DetailsContainer>
       </Container>
       {Platform.OS === 'ios' && <FixBottomColor />}
