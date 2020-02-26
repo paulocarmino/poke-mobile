@@ -1,32 +1,22 @@
 import React, { useContext, useRef, useEffect, useState } from 'react';
 import { StatusBar } from 'react-native';
-import { useQuery } from '@apollo/react-hooks';
 import debounce from 'lodash/debounce';
 
 import { Container, Text, SearchBar } from './styles';
 import GridList from '~/components/GridList';
-import { GET_ALL_POKEMONS } from '~/graphql/query';
+
 import { SearchbarContext } from '~/contexts/Searchbar';
 
 export default function Home({ navigation }) {
-  const { searchbarBoolean } = useContext(SearchbarContext);
+  const { searchbarBoolean, setSearchbarQuery } = useContext(SearchbarContext);
   const searchbarRef = useRef();
   const [searchText, setSearchText] = useState(''); // For searchbar input
-  let [searchTextQuery, setSearchTextQuery] = useState(''); // For GraphQL query
-
-  const { loading, error, data, variables } = useQuery(GET_ALL_POKEMONS, {
-    variables: {
-      where: {
-        name_contains: searchTextQuery,
-      },
-    },
-  });
 
   // Deboucing 'searchTextQuery' for GrapgQL Query
   useEffect(() => {
     const handler = setTimeout(() => {
-      setSearchTextQuery(searchText);
-    }, 500);
+      setSearchbarQuery(searchText);
+    }, 250);
 
     return () => {
       clearTimeout(handler);
@@ -40,14 +30,12 @@ export default function Home({ navigation }) {
     }
   }, [searchbarBoolean]);
 
-  if (loading) return <Text>Loading...</Text>;
-  if (error) return <Text>Error :(</Text>;
-
   return (
     <Container>
       <StatusBar barStyle="light-content" />
       {searchbarBoolean && (
         <SearchBar
+          placeholder="Search for pokemon name"
           ref={searchbarRef}
           value={searchText}
           onChangeText={query => {
@@ -55,7 +43,7 @@ export default function Home({ navigation }) {
           }}
         />
       )}
-      <GridList data={data.pokemons} navigation={navigation} />
+      <GridList navigation={navigation} />
     </Container>
   );
 }

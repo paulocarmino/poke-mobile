@@ -40,3 +40,5 @@ export const Image = styled.Image.attrs({
 })`
   width: 90px;
 `;
+
+export const Text = styled.Text``;

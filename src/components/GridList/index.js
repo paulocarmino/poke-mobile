@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { darken, setSaturation } from 'polished';
+import { useQuery } from '@apollo/react-hooks';
 
 import {
   Grid,
@@ -8,16 +10,31 @@ import {
   ItemName,
   ItemNumber,
   Image,
+  Text,
 } from './styles';
 
-import { darken, setSaturation } from 'polished';
 import Label from '~/components/Label';
+import { GET_ALL_POKEMONS } from '~/graphql/query';
+import { SearchbarContext } from '~/contexts/Searchbar';
 
-export default function GridList({ data, navigation }) {
+export default function GridList({ navigation }) {
+  const { searchbarQuery } = useContext(SearchbarContext);
+
+  const { loading, error, data } = useQuery(GET_ALL_POKEMONS, {
+    variables: {
+      where: {
+        name_contains: searchbarQuery,
+      },
+    },
+  });
+
+  if (loading) return <Text>Loading...</Text>;
+  if (error) return <Text>Error :(</Text>;
+
   return (
     <Grid
       itemDimension={150}
-      items={data}
+      items={data.pokemons}
       spacing={5}
       renderItem={({ item, index }) => (
         <ItemContainer
