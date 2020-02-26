@@ -6,11 +6,11 @@ import {
   InfoContainer,
   TextsContainer,
   ItemName,
-  ItemCode,
+  ItemNumber,
   Image,
 } from './styles';
 
-import { darken } from 'polished';
+import { darken, setSaturation } from 'polished';
 import Label from '~/components/Label';
 
 export default function GridList({ data, navigation }) {
@@ -21,14 +21,15 @@ export default function GridList({ data, navigation }) {
       spacing={5}
       renderItem={({ item, index }) => (
         <ItemContainer
-          backgroundColor={item.color_custom}
+          // Satura a cor em 0.5 para melhorar visualização. Quando o servidor de PRD estiver online, a imagem e a cor jã virão com satuação, devido ao upload com efeitos do Clodinary.
+          backgroundColor={setSaturation('0.50', item.color_custom)}
           rippleColor={darken(0.1, item.color_custom)}
           onPress={() => navigation.navigate('Details', item)}
         >
           <>
             <InfoContainer>
               <TextsContainer>
-                <ItemCode>{item.number}</ItemCode>
+                <ItemNumber>{item.number}</ItemNumber>
                 <ItemName>{item.name}</ItemName>
               </TextsContainer>
               <Label types={item.types} />

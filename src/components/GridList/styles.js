@@ -29,9 +29,10 @@ export const ItemName = styled.Text`
   font-weight: 600;
 `;
 
-export const ItemCode = styled.Text`
+export const ItemNumber = styled.Text`
   font-size: 12px;
   color: #fff;
+  letter-spacing: 1px;
 `;
 
 export const Image = styled.Image.attrs({
