@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { useTheme } from '@react-navigation/native';
 
 import { IconButton } from 'react-native-paper';
@@ -7,6 +8,7 @@ import SearchIcon from '~/components/SearchIcon';
 
 import Home from '~/pages/Home';
 import Details from '~/pages/Details';
+import Drawer from '~/pages/Drawer';
 
 const DefaultHeaderOptions = () => {
   const { colors } = useTheme();
@@ -40,7 +42,7 @@ const DetailsHeaderOptions = () => {
 };
 
 const HomeStack = createStackNavigator();
-export const Routes = () => {
+const HomeStackScreen = () => {
   return (
     <HomeStack.Navigator
       initialRouteName="Home"
@@ -59,6 +61,24 @@ export const Routes = () => {
         options={{ ...DetailsHeaderOptions() }}
       />
     </HomeStack.Navigator>
+  );
+};
+
+const DrawerNavigator = createDrawerNavigator();
+export const Routes = () => {
+  return (
+    <DrawerNavigator.Navigator
+      drawerStyle={{
+        backgroundColor: '#FFF',
+        width: 340,
+      }}
+      drawerContent={() => <Drawer />}
+    >
+      <DrawerNavigator.Screen
+        name="HomeNavigator"
+        component={HomeStackScreen}
+      />
+    </DrawerNavigator.Navigator>
   );
 };
 
