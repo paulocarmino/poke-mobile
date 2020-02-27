@@ -3,8 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { useTheme } from '@react-navigation/native';
 
-import { IconButton } from 'react-native-paper';
 import SearchIcon from '~/components/SearchIcon';
+import MenuIcon from '~/components/MenuIcon';
 
 import Home from '~/pages/Home';
 import Details from '~/pages/Details';
@@ -24,12 +24,10 @@ const DefaultHeaderOptions = () => {
   };
 };
 
-const HomeHeaderOptions = () => {
-  const { colors } = useTheme();
-
+const HomeHeaderOptions = navigation => {
   return {
     title: 'PokeApp',
-    headerLeft: () => <IconButton icon="menu" color={colors.accent} />,
+    headerLeft: () => <MenuIcon navigation={navigation} />,
     headerRight: () => <SearchIcon />,
   };
 };
@@ -53,7 +51,9 @@ const HomeStackScreen = () => {
       <HomeStack.Screen
         name="Home"
         component={Home}
-        options={{ ...HomeHeaderOptions() }}
+        options={({ navigation }) => ({
+          ...HomeHeaderOptions(navigation),
+        })}
       />
       <HomeStack.Screen
         name="Details"

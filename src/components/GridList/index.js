@@ -29,7 +29,6 @@ export default function GridList({ navigation }) {
   });
 
   const handleNavigation = item => {
-    console.tron.log('Tentei ir pro pokemon ' + item.name);
     navigation.navigate('Details', item);
   };
 
