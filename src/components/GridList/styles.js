@@ -26,12 +26,14 @@ export const InfoContainer = styled.View`
 export const ItemName = styled.Text`
   font-size: 16px;
   color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   font-weight: 600;
 `;
 
 export const ItemNumber = styled.Text`
   font-size: 12px;
   color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
 `;
 

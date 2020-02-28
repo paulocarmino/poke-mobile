@@ -1,7 +1,4 @@
 import styled from 'styled-components/native';
-import { Dimensions } from 'react-native';
-
-const barWidth = Dimensions.get('screen').width - 50;
 
 export const TypesContainer = styled.View`
   flex-direction: column;
@@ -22,6 +19,7 @@ export const Label = styled.View`
   border-radius: 5px;
 
   background-color: ${({ color }) => (color ? color : '#666')};
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 
   ${({ row }) =>
     row &&

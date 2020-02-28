@@ -63,7 +63,7 @@ export default function Drawer() {
 
         <TitleContainer>
           <TitleIcon />
-          <TitleText>Bicliotecas Utilizadas</TitleText>
+          <TitleText>Bibliotecas Utilizadas</TitleText>
         </TitleContainer>
 
         <TextMarginLeft>React Native</TextMarginLeft>

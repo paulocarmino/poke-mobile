@@ -19,18 +19,21 @@ export const TextContainer = styled.View`
 
 export const NumberText = styled.Text`
   color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   font-size: 14px;
   letter-spacing: 2px;
 `;
 
 export const NameText = styled.Text`
   color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   font-size: 28px;
   font-weight: 600;
 `;
 
 export const SpecieText = styled.Text`
   color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   font-size: 15px;
 
   margin-bottom: 10px;

@@ -33,7 +33,7 @@ export default function Home({ navigation }) {
   return (
     <Container>
       <StatusBar barStyle="light-content" />
-      {searchbarBoolean && (
+      {!!searchbarBoolean && (
         <SearchBar
           placeholder="Search for pokemon name"
           ref={searchbarRef}

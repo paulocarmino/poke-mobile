@@ -43,8 +43,7 @@ export default function GridList({ navigation }) {
       spacing={5}
       renderItem={({ item, index }) => (
         <ItemContainer
-          // Satura a cor em 0.5 para melhorar visualização. Quando o servidor de PRD estiver online, a imagem e a cor jã virão com satuação, devido ao upload com efeitos do Clodinary.
-          backgroundColor={setSaturation('0.60', item.color_custom)}
+          backgroundColor={item.color_custom}
           rippleColor={darken(0.1, item.color_custom)}
           onPress={() => handleNavigation(item)}
         >
@@ -56,7 +55,7 @@ export default function GridList({ navigation }) {
               </TextsContainer>
               <Label types={item.types} />
             </InfoContainer>
-            <Image source={{ uri: item.img }} />
+            <Image source={{ uri: item.img_custom }} />
           </>
         </ItemContainer>
       )}

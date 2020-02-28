@@ -18,20 +18,18 @@ import DetailsTabs from './Tabs';
 
 export default function Details({ navigation, route }) {
   const pokemon = route.params;
-  // Satura a cor em 0.5 para melhorar visualização. Quando o servidor de PRD estiver online, a imagem e a cor jã virão com satuação, devido ao upload com efeitos do Clodinary.
-  const colorSatured = setSaturation('0.65', pokemon.color_custom);
 
   navigation.setOptions({
     headerStyle: {
-      backgroundColor: colorSatured,
-      shadowColor: colorSatured,
+      backgroundColor: pokemon.color_custom,
+      shadowColor: pokemon.color_custom,
       elevation: 0,
     },
   });
 
   return (
     <>
-      <Container background={colorSatured}>
+      <Container background={pokemon.color_custom}>
         <Header>
           <TextContainer>
             <NumberText>{pokemon.number}</NumberText>
@@ -39,10 +37,10 @@ export default function Details({ navigation, route }) {
             <SpecieText>{pokemon.specie}</SpecieText>
             <Label types={pokemon.types} row />
           </TextContainer>
-          <Image source={{ uri: pokemon.img }} style={{ zIndex: 10 }} />
+          <Image source={{ uri: pokemon.img_custom }} style={{ zIndex: 10 }} />
         </Header>
         <DetailsContainer style={{ zIndex: -1 }}>
-          <DetailsTabs color={colorSatured} pokemon={pokemon} />
+          <DetailsTabs color={pokemon.color_custom} pokemon={pokemon} />
         </DetailsContainer>
       </Container>
       {Platform.OS === 'ios' && <FixBottomColor />}

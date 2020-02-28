@@ -2,9 +2,9 @@ const DEV = 'development';
 const env = process.env.NODE_ENV || DEV;
 
 const urls = {
-  development: 'http://192.168.0.102:1337/graphql',
-  test: 'http://localhost:3000',
-  production: 'http://192.168.0.102:1337/graphql',
+  development: 'https://poke-api.paulocarmino.com/graphql',
+  test: 'https://poke-api.paulocarmino.com/graphql',
+  production: 'https://poke-api.paulocarmino.com/graphql',
 };
 
 export const API_URL = urls[env];
