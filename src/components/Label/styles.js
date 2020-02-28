@@ -12,6 +12,8 @@ export const TypesContainer = styled.View`
   `};
 `;
 
+export const ScrollView = styled.ScrollView``;
+
 export const Label = styled.View`
   width: 60px;
   padding: 2px;

@@ -44,7 +44,7 @@ export const Bar = styled(ProgressBarAnimated).attrs(({ color }) => {
   return {
     width: barWidth,
     height: 10,
-    backgroundColor: setSaturation('0.65', color),
-    borderColor: '#DDDDDD',
+    backgroundColor: color,
+    borderColor: '#E5E5E5',
   };
 })``;

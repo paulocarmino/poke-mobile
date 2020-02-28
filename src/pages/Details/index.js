@@ -35,7 +35,7 @@ export default function Details({ navigation, route }) {
             <NumberText>{pokemon.number}</NumberText>
             <NameText>{pokemon.name}</NameText>
             <SpecieText>{pokemon.specie}</SpecieText>
-            <Label types={pokemon.types} row />
+            <Label types={pokemon.types} row scrollEnabled={false} />
           </TextContainer>
           <Image source={{ uri: pokemon.img_custom }} style={{ zIndex: 10 }} />
         </Header>
