@@ -40,9 +40,8 @@ export default function Drawer() {
           Esse app é alimentado via GraphQL utilizando
         </Text>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-          <Text>
-            a<TextStrong> PokeAPI</TextStrong>
-          </Text>
+          <Text>a</Text>
+          <TextStrong> PokeAPI</TextStrong>
           <ApiIcon />
           <Text>desenvolvida em NodeJS</Text>
         </View>

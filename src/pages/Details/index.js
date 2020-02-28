@@ -43,7 +43,7 @@ export default function Details({ navigation, route }) {
           <DetailsTabs color={pokemon.color_custom} pokemon={pokemon} />
         </DetailsContainer>
       </Container>
-      {Platform.OS === 'ios' && <FixBottomColor />}
+      {!!(Platform.OS === 'ios') && <FixBottomColor />}
     </>
   );
 }

@@ -5,7 +5,7 @@ export const TypesContainer = styled.View`
   margin-top: 0px;
 
   ${({ row }) =>
-    row &&
+    !!row &&
     `
     flex-direction: row;
     margin-top: 5px;
@@ -24,7 +24,7 @@ export const Label = styled.View`
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 
   ${({ row }) =>
-    row &&
+    !!row &&
     `
     width: 80px;
     padding: 4px;
@@ -38,7 +38,7 @@ export const Text = styled.Text`
   color: #fff;
 
   ${({ row }) =>
-    row &&
+    !!row &&
     `
     font-size: 14px;
   `}
