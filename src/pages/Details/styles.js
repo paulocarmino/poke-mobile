@@ -46,11 +46,13 @@ export const Image = styled.Image.attrs({
 
   width: 160px;
   height: 160px;
+  box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const DetailsContainer = styled.View`
   flex: 1;
   background-color: #fff;
+  box-shadow: 0px -4px 3px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
 
   margin-top: -30px;

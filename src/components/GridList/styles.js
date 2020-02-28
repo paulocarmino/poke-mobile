@@ -41,6 +41,7 @@ export const Image = styled.Image.attrs({
   resizeMode: 'stretch',
 })`
   width: 90px;
+  box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const Text = styled.Text``;
