@@ -23,7 +23,11 @@ export default function Drawer() {
   return (
     <Container>
       <Logo />
-      <TextsContainers>
+      <TextsContainers
+        contentContainerStyle={{
+          paddingVertical: 10,
+        }}
+      >
         <Text style={{ marginTop: -5 }}>
           Projeto desenvolvido para aprimorar os
         </Text>

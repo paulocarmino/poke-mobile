@@ -19,7 +19,7 @@ export const Logo = styled.Image.attrs({
   margin-top: ${Platform.OS === 'android' ? '36px' : '10px'};
 `;
 
-export const TextsContainers = styled.View`
+export const TextsContainers = styled.ScrollView`
   flex: 1;
 
   margin-left: 20px;
