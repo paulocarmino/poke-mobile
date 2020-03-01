@@ -24,7 +24,13 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.paulocarmino.pokemobile",
+      "buildNumber": "1.0.4",
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.paulocarmino.pokemobile",
+      "versionCode": 1
     }
   }
 }
