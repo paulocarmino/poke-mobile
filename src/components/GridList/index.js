@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { darken, setSaturation } from 'polished';
+import { darken } from 'polished';
 import { useQuery } from '@apollo/react-hooks';
 
 import {

@@ -96,9 +96,8 @@ export default function Drawer() {
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Text>Desenvolvido com</Text>
           <HeartIcon />
-          <Text>
-            por <TextStrong>Paulo Carmino</TextStrong>
-          </Text>
+          <Text>por</Text>
+          <TextStrong> Paulo Carmino</TextStrong>
         </View>
       </View>
     </Container>

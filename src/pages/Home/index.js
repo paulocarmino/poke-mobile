@@ -1,6 +1,5 @@
 import React, { useContext, useRef, useEffect, useState } from 'react';
-import { StatusBar } from 'react-native';
-import debounce from 'lodash/debounce';
+import { StatusBar, View } from 'react-native';
 
 import { Container, Text, SearchBar } from './styles';
 import GridList from '~/components/GridList';
@@ -33,7 +32,7 @@ export default function Home({ navigation }) {
   return (
     <Container>
       <StatusBar barStyle="light-content" />
-      {!!searchbarBoolean && (
+      {searchbarBoolean ? (
         <SearchBar
           placeholder="Search for pokemon name"
           ref={searchbarRef}
@@ -42,6 +41,8 @@ export default function Home({ navigation }) {
             setSearchText(query);
           }}
         />
+      ) : (
+        <View />
       )}
       <GridList navigation={navigation} />
     </Container>

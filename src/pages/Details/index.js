@@ -1,6 +1,5 @@
 import React from 'react';
-import { setSaturation } from 'polished';
-import { Platform } from 'react-native';
+import { Platform, View } from 'react-native';
 
 import {
   Container,
@@ -43,7 +42,7 @@ export default function Details({ navigation, route }) {
           <DetailsTabs color={pokemon.color_custom} pokemon={pokemon} />
         </DetailsContainer>
       </Container>
-      {!!(Platform.OS === 'ios') && <FixBottomColor />}
+      {Platform.OS === 'ios' ? <FixBottomColor /> : <View />}
     </>
   );
 }
