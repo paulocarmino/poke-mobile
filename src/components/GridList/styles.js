@@ -44,4 +44,14 @@ export const Image = styled.Image.attrs({
   box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3);
 `;
 
-export const Text = styled.Text``;
+export const Text = styled.Text`
+  font-size: 20px;
+  margin-bottom: 10px;
+`;
+
+export const LoadingContainer = styled.View`
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;

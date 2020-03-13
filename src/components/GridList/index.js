@@ -1,6 +1,7 @@
-import React, { useContext } from 'react';
-import { darken, setSaturation } from 'polished';
+import React, { useContext, useRef, useEffect } from 'react';
+import { darken } from 'polished';
 import { useQuery } from '@apollo/react-hooks';
+import LottieView from 'lottie-react-native';
 
 import {
   Grid,
@@ -11,6 +12,7 @@ import {
   ItemNumber,
   Image,
   Text,
+  LoadingContainer,
 } from './styles';
 
 import Label from '~/components/Label';
@@ -19,6 +21,7 @@ import { SearchbarContext } from '~/contexts/Searchbar';
 
 export default function GridList({ navigation }) {
   const { searchbarQuery } = useContext(SearchbarContext);
+  const loadingRef = useRef(null);
 
   const { loading, error, data } = useQuery(GET_ALL_POKEMONS, {
     variables: {
@@ -32,7 +35,25 @@ export default function GridList({ navigation }) {
     navigation.navigate('Details', item);
   };
 
-  if (loading) return <Text>Loading...</Text>;
+  useEffect(() => {
+    if (loadingRef.current) loadingRef.current.play();
+  }, [loadingRef]);
+
+  if (loading)
+    return (
+      <LoadingContainer>
+        <LottieView
+          ref={loadingRef}
+          style={{
+            width: 100,
+            height: 100,
+          }}
+          source={require('@assets/loading.json')}
+        />
+        <Text>Loading...</Text>
+      </LoadingContainer>
+    );
+
   if (error) return <Text>Error :(</Text>;
 
   return (
