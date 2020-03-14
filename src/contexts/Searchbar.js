@@ -8,6 +8,7 @@ function SearchbarProvider({ children }) {
 
   const toggleSearchbar = () => {
     setSearchbarBoolean(!searchbarBoolean);
+    setSearchbarQuery('');
   };
 
   return (

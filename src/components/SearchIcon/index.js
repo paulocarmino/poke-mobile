@@ -11,6 +11,7 @@ export default function SearchIcon() {
   const handlePress = () => {
     toggleSearchbar();
   };
+
   return (
     <IconButton
       icon={searchbarBoolean ? 'magnify-close' : 'magnify'}

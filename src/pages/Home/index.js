@@ -24,6 +24,7 @@ export default function Home({ navigation }) {
 
   // Focus Searchbar when icon is clicked
   useEffect(() => {
+    setSearchText('');
     if (searchbarBoolean === true) {
       searchbarRef.current.focus();
     }
