@@ -9,7 +9,7 @@
 <p align="center"><img width=100% src="https://res.cloudinary.com/paulocarmino/image/upload/v1584321256/github-poke-highlight_wserwk.png"></p>
 <p align="center">Rode no seu dispotivo através do Expo, ou baixe nosso APK:</p>
 <p align="center"><a href="https://expo.io/@paulocarmino/poke-mobile"><img src="https://img.shields.io/badge/Runs%20with%20Expo-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000"></a>
-<a href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40paulocarmino/poke-mobile-db80bffb37fc4e7d95ebe9d718cf0b4a-signed.apk"><img src="https://img.shields.io/badge/Download_APK-E53935?style=flat-square&logo=android&logoColor=fff"></a></p>
+<a href="https://drive.google.com/file/d/1kdG9TpvUVCBItfLwie_XUIs390PbgBOn/view?usp=sharing"><img src="https://img.shields.io/badge/Download_APK-E53935?style=flat-square&logo=android&logoColor=fff"></a></p>
 
 # Tecnologias envolvidas
 
