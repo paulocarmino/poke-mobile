@@ -11,14 +11,14 @@
 <p align="center"><a href="https://expo.io/@paulocarmino/poke-mobile"><img src="https://img.shields.io/badge/Runs%20with%20Expo-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000"></a>
 <a href="https://drive.google.com/file/d/1kdG9TpvUVCBItfLwie_XUIs390PbgBOn/view?usp=sharing"><img src="https://img.shields.io/badge/Download_APK-E53935?style=flat-square&logo=android&logoColor=fff"></a></p>
 
-# Tecnologias envolvidaas
+# Tecnologias envolvidaaaaas
 
 - React Native
 - GraphQL
 - Styled Components
 - Expo
 
-# Rodando o projeto
+# Rodando o projetoooooo
 
 ```
 # Clone esse repositorio
