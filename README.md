@@ -18,7 +18,7 @@
 - Styled Components
 - Expo
 
-# Rodando o projetooooo
+# Rodando o projeto
 
 ```
 # Clone esse repositorio
